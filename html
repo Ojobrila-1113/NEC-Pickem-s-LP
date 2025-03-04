@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberBot Landing Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="hero">
+        <h1 id="dynamic-text">CyberBot</h1>
+        <p>Your ultimate gaming assistant</p>
+        <a href="#" class="btn">Invite Bot</a>
+        <a href="#" class="btn secondary">Join Discord</a>
+    </div>
+    
+    <div class="glass-panel">
+        <div class="feature">
+            <img src="icon1.png" alt="Feature 1">
+            <p>Auto Moderation</p>
+        </div>
+        <div class="feature">
+            <img src="icon2.png" alt="Feature 2">
+            <p>Music Player</p>
+        </div>
+        <div class="feature">
+            <img src="icon3.png" alt="Feature 3">
+            <p>Fun Commands</p>
+        </div>
+    </div>
+
+    <footer>
+        <a href="#"><img src="instagram.png" alt="Instagram"></a>
+        <a href="#"><img src="twitter.png" alt="Twitter"></a>
+        <a href="#"><img src="github.png" alt="GitHub"></a>
+    </footer>
+
+    <script>
+        const text = "CyberBot - Your Ultimate Gaming Assistant";
+        let index = 0;
+        function typeEffect() {
+            if (index < text.length) {
+                document.getElementById("dynamic-text").innerHTML += text.charAt(index);
+                index++;
+                setTimeout(typeEffect, 100);
+            }
+        }
+        typeEffect();
+    </script>
+</body>
+</html>
